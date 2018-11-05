@@ -8,10 +8,12 @@
     <link th:href="@{/bootstrap/css/bootstrap-theme.css}" rel="stylesheet" />
 </head>
 <script type="text/javascript" th:src="@{/jquery/jquery-1.12.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/jquery.PrintArea.js}"></script>
 <script type="text/javascript" th:inline="javascript">
     $(document).ready(function () {
-    //    用于测试jq是否引用
-    //     alert("成功引用jq！");
+        $("#print_button").click(function () {
+            $("#print_div").printArea();
+        });
     });
 </script>
 <body>
@@ -30,5 +32,14 @@
     <a  th:text="上传文件" th:href="@{/FileUploadController/toviewUploadPage}"/>
     <br/>
     <a  th:text="文件下载" th:href="@{/FileDownLoadController/toviewFileDownload}"/>
+    <hr/>
+    <h1>打印指定区域</h1>
+    <div>
+        <input  id="print_button" type="button" value="打印" />
+    </div>
+    <div id="print_div">
+        <h3>我是被打印的区域……</h3>
+    </div>
+    <hr/>
 </body>
 </html>
