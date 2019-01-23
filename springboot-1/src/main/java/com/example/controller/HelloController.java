@@ -18,7 +18,7 @@ public class HelloController {
 
     @ApiOperation(value = "测试接口",notes = "测试SpringBoot的配置",httpMethod = "GET")
     @ResponseBody
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String index(){
         logger.info("日志输出：这是一个请求。。。");
         return "index";
