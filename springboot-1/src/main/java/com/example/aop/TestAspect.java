@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 public class TestAspect {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut(value = "execution(* com.example.*.*.*(..))")
+    @Pointcut(value = "execution(* com.example.controller.*.*(..))")
     public void print(){}
 
     @Before("print()")
