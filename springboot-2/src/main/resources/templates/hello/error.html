@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Pager</title>
+</head>
+<script type="text/javascript" th:src="@{/js/jquery/jquery-1.12.4.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/layer/layer/layer.js}"></script>
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    var basePath = /*[[@{/}]]*/;
+    /*]]>*/
+
+</script>
+<body>
+    <div>
+        <p>错误代码:<span th:text="${code}" ></span></p>
+        <p>错误信息:<span th:text="${msg}" ></span></p>
+    </div>
+</body>
+</html>
